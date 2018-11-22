@@ -1,0 +1,62 @@
+// GLOBAL SETTINGS
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    overflow-x: hidden;
+
+    user-select: none;
+}
+
+//MIXINS
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//VARIABLES
+
+$primaryColor: #ffbc42;
+$secondaryColor: #006ba6;
+
+$white: #fff;
+$white2: #e0e2db;
+
+$black: #080708;
+$grey: #191716;
+
+$greyLight: #dbd8d6;
+$greyLight2: #c3bebb;
+$greyLight3: #aba4a0;
+
+$greyDark: #5f5754;
+$greyDark2: #443e3c;
+$greyDark3: #292524;
+
+$primaryFont: 'Comfortaa',
+cursive;
+$secondaryFont: 'Montserrat',
+sans-serif;
+
+$shadow: 0 3px 9px rgba(0, 0, 0, 0.12), 0 3px 5px rgba(0, 0, 0, 0.16);
+

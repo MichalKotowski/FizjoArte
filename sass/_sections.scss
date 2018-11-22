@@ -1,0 +1,254 @@
+// 1ST SECTION - navigation
+
+.navigation {
+    display: grid;
+    grid-template-columns: 1fr 108rem 1fr;
+
+    &__content {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        height: 8rem;
+
+        &_menu {
+            li {
+                list-style: none;
+                display: flex;
+                display: inline-block;
+            }
+
+            li:not(:last-child) {
+                margin-right: 4rem;
+            }
+
+            a {
+                text-decoration: none;
+                color: $greyLight3;
+                font-family: $primaryFont;
+                font-weight: 400;
+                font-size: 1.6rem;
+
+                transition: all .5s;
+            }
+
+            a:hover {
+                color: $greyDark;
+            }
+        }
+
+        &_phone {
+            p {
+                color: $greyDark3;
+                font-family: $primaryFont;
+                font-weight: 700;
+                font-size: 2.4rem;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+// 2ND SECTION - header
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 108rem 1fr;
+
+    &__content {
+        grid-column: 2 / 3;
+        position: relative;
+
+        height: 50rem;
+        display: flex;
+        align-items: center;
+
+        &_display {
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            &-img {
+                height: 50rem;
+                margin-right: -10rem;
+            }
+        }
+    }
+}
+
+// 3RD SECTION - complaints
+
+.complaints {
+    display: grid;
+    grid-template-columns: 1fr 108rem 1fr;
+
+
+    &__content {
+        grid-column: 2 / 3;
+
+        &_list {
+            display: flex;
+
+            ul {
+                margin: 0 8rem 0 6rem;
+            }
+
+            li {
+                font-family: $primaryFont;
+                font-size: 1.6rem;
+                color: $greyLight3;
+                font-weight: 400;
+                position: relative;
+                line-height: 1.7;
+
+                list-style: none;
+
+                transition: all .5s;
+            }
+
+            li:hover {
+color: $greyDark;
+            }
+
+            li:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+
+            li::before {
+                color: $secondaryColor;
+                content: "";
+                height: .7rem;
+                width: .7rem;
+                background-color: $secondaryColor;
+                font-size: 2rem;
+                line-height: 0;
+                position: absolute;
+                left: -2rem;
+                top: .8rem;
+
+                transform: rotate(-45deg);
+                border-radius: 1px;
+            }
+        }
+    }
+}
+
+// 4TH SECTION - services
+
+.services {
+    display: grid;
+    grid-template-columns: 1fr 108rem 1fr;
+
+    &__content {
+        grid-column: 2 / 3;
+
+        &_offer {
+            display: flex;
+
+            &-left {
+                width: 46rem;
+            }
+
+            &-right {
+                width: 62rem;
+            }
+
+        }
+    }
+}
+
+// 5TH SECTION - experience
+
+.experience {
+    display: grid;
+    grid-template-columns: 1fr 108rem 1fr;
+
+    &__content {
+        grid-column: 2 / 3;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2.7rem 30rem 1fr 1fr;
+row-gap: 4rem;
+
+        &_about {
+            display: flex;
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+            align-items: center;
+
+
+            &-photo {
+                height: 30rem;
+                width: 50%;
+                border-radius: 10px;
+            }
+
+            &-text {
+                width: 50%;
+                padding-left: 8rem;
+                text-align: justify;
+            }
+        }
+
+        &_education {
+            grid-column: 1 / 3;
+            grid-row: 3 / 4;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &-position {
+                font-size: 1.4rem;
+                padding: 0 8rem;
+                text-align: center;
+            }
+        }
+
+        &_certificate {
+            grid-column: 1 / 3;
+            grid-row: 4 / 5;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &-position {
+                font-size: 1.4rem;
+                padding: 1rem 2rem;
+                text-align: center;
+                color: $greyDark;
+                border-radius: 5px;
+
+                border: 1px solid $greyLight;
+            }
+        }
+    }
+}
+
+// 5TH SECTION - contact
+
+.contact {
+    background-color: $grey;
+
+
+    display: grid;
+    grid-template-columns: 1fr 108rem 1fr;
+
+    position: relative;
+    &__content {
+        grid-column: 2 / 3;
+
+        h3 {
+            color: $primaryColor;
+        }
+
+        &_info {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

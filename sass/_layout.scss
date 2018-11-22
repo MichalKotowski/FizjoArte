@@ -1,0 +1,59 @@
+// LAYOUT
+
+.layout {
+    background-image: linear-gradient(135deg, transparent 80%, #fff6e5 80%);
+
+
+    height: 100%;
+}
+
+// BACKGROUND SHAPES
+
+.bgShape01 {
+    width: 175rem;
+    height: 175rem;
+    background-color: #e5f6ff;
+    position: absolute;
+    z-index: -100;
+    border-radius: 100px;
+    transform: rotate(-45deg);
+    right: -97rem;
+    top: -100rem;
+
+}
+
+.bgShape02 {
+    width: 50rem;
+    height: 50rem;
+    background-color: #e5f6ff;
+    position: absolute;
+    z-index: -100;
+    border-radius: 100px;
+    transform: rotate(45deg);
+    left: -20rem;
+    top: 20rem;
+}
+
+.bgShape03 {
+    width: 70rem;
+    height: 70rem;
+    background-color: #fff6e5;
+    position: absolute;
+    z-index: -100;
+    border-radius: 100px;
+    transform: rotate(45deg);
+    left: -23rem;
+    top: 120rem;
+}
+
+.bgShape04 {
+    width: 175rem;
+    height: 175rem;
+    background-color: #fff6e5;
+    position: absolute;
+    z-index: -100;
+    border-radius: 100px;
+    transform: rotate(-45deg);
+    right: -97rem;
+    top: 200rem;
+}

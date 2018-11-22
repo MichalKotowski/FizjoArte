@@ -1,0 +1,432 @@
+// PADDING-BOTTOM
+
+.pbHugest {
+    padding-bottom: 20rem;
+}
+
+.pbBig {
+    padding-bottom: 10rem;
+}
+
+// PADDING-TOP
+
+.ptBig {
+    padding-top: 10rem;
+}
+
+// MARGIN-TOP
+
+.mtHuge {
+    margin-top: 10rem;
+}
+
+// MARGIN-BOTTOM
+
+.mbTiny {
+    margin-bottom: 2rem;
+}
+
+.mbSmall {
+    margin-bottom: 4rem;
+}
+
+.mbMedium {
+    margin-bottom: 6rem;
+}
+
+.mbBig {
+    margin-bottom: 8rem;
+}
+
+.mbHuge {
+    margin-bottom: 10rem;
+}
+
+// MARGIN-RIGHT
+
+.mrSmall {
+    margin-right: 4rem;
+}
+
+// MARGIN-LEFT
+
+.mlSmall {
+    margin-left: 4rem;
+}
+
+// BUTTONS
+
+.primaryButton {
+    border: none;
+    background-color: $secondaryColor;
+
+    padding: 2rem 5rem;
+
+    border-radius: 50px;
+
+    font-family: $primaryFont;
+    font-weight: 700;
+    color: $white;
+    font-size: 1.6rem;
+
+    transform: translateY(0);
+
+    transition: all .5s;
+
+    &:hover {
+        transform: translateY(-3px);
+
+        box-shadow: $shadow;
+    }
+
+    &:active {
+        transform: translateY(0);
+
+        box-shadow: none;
+    }
+}
+
+.secondaryButton {
+    border: none;
+    background-color: transparent;
+    box-shadow: inset 0px 0px 0px 3px $primaryColor;
+
+    padding: 2rem 5rem;
+
+    border-radius: 50px;
+
+    font-family: $primaryFont;
+    font-weight: 700;
+    color: $primaryColor;
+    font-size: 1.6rem;
+
+    position: relative;
+
+    transform: translateY(0);
+
+    transition: all .5s;
+
+    &::before {
+        content: "";
+        height: 58px;
+        width: 193px;
+        border-radius: 50px;
+        background-color: $primaryColor;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        z-index: -1;
+        transition: all 1s;
+        transform-origin: center;
+
+    }
+
+    &:hover {
+        color: $white;
+
+        transform: translateY(-3px);
+
+        box-shadow:
+            inset 0px 0px 0px 3px $primaryColor,
+            $shadow;
+    }
+
+    &:active {
+        transform: translateY(0);
+
+        box-shadow: inset 0px 0px 0px 3px $primaryColor;
+    }
+
+    &:hover::before {
+        transform: scaleX(1);
+    }
+}
+
+// SERVICE BOX
+
+.serviceBox {
+    display: flex;
+    align-items: center;
+
+    padding: 1.5rem 1rem;
+    margin: 0 0 0 8rem;
+
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16);
+
+    position: relative;
+    overflow: hidden;
+
+    transition: all .5s;
+
+    &_title {
+        width: 18rem;
+        margin-left: 1rem;
+        margin-right: 2rem;
+
+        font-family: $primaryFont;
+        font-size: 1.6rem;
+        color: $secondaryColor;
+        font-weight: 700;
+        line-height: 2rem;
+        z-index: 100;
+    }
+
+    &_description {
+        width: 100%;
+
+        font-family: $primaryFont;
+        font-size: 1.4rem;
+        color: $greyLight3;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: justify;
+        margin-right: 1rem;
+
+        transition: all .5s;
+    }
+
+    &:hover {
+        p {
+            color: $greyDark;
+        }
+    }
+}
+
+.serviceBox:not(:last-child) {
+    margin: 0 0 2rem 8rem;
+}
+
+.serviceBox::before {
+    content: "";
+    background-color: #e5f6ff;
+    height: 18rem;
+    width: 15rem;
+    position: absolute;
+    transform: rotate(15deg);
+    left: -1rem;
+
+    z-index: 1;
+}
+
+// PRICE BOX
+
+.priceBox {
+    display: flex;
+    justify-content: center;
+
+    &__primary {
+        background-color: #e5f6ff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16);
+
+        height: 24rem;
+        width: 24rem;
+        position: relative;
+
+        border-radius: 10px;
+
+        z-index: 100;
+
+        background:
+            radial-gradient(circle, transparent 20%, #e5f6ff 20%, #e5f6ff 80%, transparent 80%, transparent),
+            radial-gradient(circle, transparent 20%, #e5f6ff 20%, #e5f6ff 80%, transparent 80%, transparent) 50px 50px,
+            linear-gradient($white 8px, transparent 8px) 0 -4px,
+            linear-gradient(90deg, $white 8px, transparent 8px) -4px 0;
+        background-color: #e5f6ff;
+        background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+
+        &_description {
+            @include center;
+
+            &-cost {
+                font-family: $primaryFont;
+                font-size: 5rem;
+                color: $greyDark3;
+                letter-spacing: 1px;
+                font-weight: 700;
+                line-height: 1;
+
+                text-align: center;
+
+                width: 15rem;
+            }
+
+            &-time {
+                font-family: $primaryFont;
+                font-size: 2rem;
+                color: $greyDark;
+                letter-spacing: 1px;
+                font-weight: 700;
+                line-height: 1;
+
+                text-align: center;
+            }
+        }
+    }
+
+    &__secondary {
+        background-color: $white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16);
+
+        height: 22rem;
+        width: 22rem;
+        position: relative;
+
+        top: 1rem;
+
+        border-radius: 0 10px 10px 0;
+
+
+        &_description {
+            @include center;
+
+            &-cost {
+                font-family: $primaryFont;
+                font-size: 5rem;
+                color: $greyDark3;
+                letter-spacing: 1px;
+                font-weight: 700;
+                line-height: 1;
+
+                text-align: center;
+
+                width: 15rem;
+            }
+
+            &-time {
+                font-family: $primaryFont;
+                font-size: 2rem;
+                color: $greyDark;
+                letter-spacing: 1px;
+                font-weight: 700;
+                line-height: 1;
+
+                text-align: center;
+            }
+        }
+    }
+}
+
+// CHECK
+
+.check {
+    &_icon {
+        font-size: 2.4rem;
+        color: green;
+        display: inline-block;
+        position: relative;
+        top: .5rem;
+        margin-right: 2rem;
+    }
+
+    &_text {
+        color: green;
+        display: inline-block;
+    }
+}
+
+// BUTTON CENTER
+
+.buttonCenter {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+// CONTACT BOX
+
+.contactBox {
+    border-radius: 10px;
+    background-color: #e5f6ff;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    display: flex;
+
+    &_square {
+        width: 8rem;
+        height: 8rem;
+        background-color: $secondaryColor;
+        position: relative;
+
+        &-icon {
+            font-size: 4rem;
+            color: $white;
+
+            position: absolute;
+            @include center;
+        }
+    }
+
+    &_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        padding-left: 4rem;
+
+        &-description {
+            color: $greyDark;
+            font-size: 1.4rem;
+        }
+    }
+
+    &_button {
+        flex: 1;
+        display: flex;
+
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+// CONTACT DATA
+
+.contactData {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    &_icon {
+        font-size: 3rem;
+        z-index: 100;
+        padding-right: 4rem;
+        color: $white;
+
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: $secondaryColor;
+        height: 4rem;
+        width: 4rem;
+        z-index: 25;
+        border-radius: 10px;
+
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16);
+
+        transform: rotate(45deg);
+
+        left: -.5rem;
+        top: .6rem;
+    }
+
+    &_text {
+        font-size: 2rem;
+        color: $white;
+        letter-spacing: 1px;
+    }
+}
+
+// FACEBOOK ICON
+
+.facebook-icon {
+    font-size: 5rem;
+    color: $primaryColor;
+}
